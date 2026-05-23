@@ -1,0 +1,9 @@
+services:
+  march7-bot:
+    build: .
+    container_name: march7-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
