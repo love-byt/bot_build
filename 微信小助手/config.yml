@@ -1,0 +1,47 @@
+# go-cqhttp 配置文件
+
+# 通信方式
+servers:
+  # 反向 WebSocket
+  - ws:
+      # 监听地址
+      address: 0.0.0.0:8080
+      # 是否启用
+      enabled: true
+
+# 账号配置
+account:
+  # QQ 账号
+  uin: 123456789
+  # 密码（建议使用QQ令牌）
+  password: ""
+  # 是否启用密码加密
+  encrypt_password: false
+  # QQ 令牌
+  token: ""
+
+# 日志配置
+log:
+  level: info
+  # 输出到控制台
+  console: true
+  # 输出到文件
+  file: "logs/bot.log"
+
+# 数据库
+database:
+  # 使用 sqlite
+  leveldb:
+    enable: true
+
+# 心跳配置
+heartbeat:
+  # 心跳间隔（秒）
+  interval: 5
+
+# 缓存配置
+cache:
+  # 缓存大小
+  image_cache_size: 256
+  # 缓存过期时间（秒）
+  cache_expire: 3600
